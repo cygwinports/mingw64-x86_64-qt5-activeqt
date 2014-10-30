@@ -2,7 +2,7 @@ CROSS_HOST="x86_64-w64-mingw32"
 inherit cross qt5-qmake
 
 NAME="mingw64-x86_64-qt5-activeqt"
-VERSION=5.2.1
+VERSION=5.3.2
 RELEASE=1
 CATEGORY="Devel"
 SUMMARY="Qt5 ActiveQt library for Win64 toolchain"
@@ -14,7 +14,7 @@ investments made on one platform across many others."
 HOMEPAGE="http://qt-project.org/"
 SRC_URI="http://download.qt-project.org/official_releases/qt/${VERSION%.*}/${VERSION}/submodules/qtactiveqt-opensource-src-${VERSION}.tar.xz"
 SRC_DIR="qtactiveqt-opensource-src-${VERSION}"
-PATCH_URI="5.2.0-cross-compile.patch"
+PATCH_URI="5.3.2-cross-compile.patch"
 
 src_install() {
 	local x
