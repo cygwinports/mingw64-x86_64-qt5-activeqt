@@ -2,7 +2,7 @@ CROSS_HOST="x86_64-w64-mingw32"
 inherit cross qt5-qmake
 
 NAME="mingw64-x86_64-qt5-activeqt"
-VERSION=5.6.2
+VERSION=5.9.3
 RELEASE=1
 CATEGORY="Devel"
 SUMMARY="Qt5 ActiveQt library for Win64 toolchain"
@@ -14,7 +14,12 @@ investments made on one platform across many others."
 HOMEPAGE="https://www.qt.io/"
 SRC_URI="http://download.qt.io/official_releases/qt/${VERSION%.*}/${VERSION}/submodules/qtactiveqt-opensource-src-${VERSION}.tar.xz"
 SRC_DIR="qtactiveqt-opensource-src-${VERSION}"
-PATCH_URI="5.3.2-cross-compile.patch"
+PATCH_URI="
+	http://pkgs.fedoraproject.org/cgit/rpms/mingw-qt5-qtactiveqt.git/plain/qtactiveqt-fix-compilation.patch
+	http://pkgs.fedoraproject.org/cgit/rpms/mingw-qt5-qtactiveqt.git/plain/qtactiveqt-fix-host-build.patch
+	http://pkgs.fedoraproject.org/cgit/rpms/mingw-qt5-qtactiveqt.git/plain/qtactiveqt-win64.patch
+	http://pkgs.fedoraproject.org/cgit/rpms/mingw-qt5-qtactiveqt.git/plain/qtactiveqt-fix-undefined-reference.patch
+"
 
 src_install() {
 	local x

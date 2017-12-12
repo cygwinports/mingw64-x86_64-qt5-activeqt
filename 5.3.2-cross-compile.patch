@@ -1,8 +1,0 @@
---- origsrc/qtactiveqt-opensource-src-5.3.2/src/src.pro	2014-09-11 05:47:51.000000000 -0500
-+++ src/qtactiveqt-opensource-src-5.3.2/src/src.pro	2014-10-29 20:52:28.349390200 -0500
-@@ -1,4 +1,4 @@
- TEMPLATE = subdirs
- SUBDIRS = activeqt
--win32:!winrt:!wince: SUBDIRS += tools
-+!cross_compile:win32:!winrt:!wince: SUBDIRS += tools
- CONFIG += ordered
